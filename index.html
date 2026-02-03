@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Links</title>
+
+<style>
+  :root {
+    --bg: #0f0f1a;
+    --card: #17172a;
+    --primary: #7c7cff;
+    --accent: #00e5ff;
+    --text: #ffffff;
+    --muted: #b3b3c7;
+    --radius: 16px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a40, #0f2a3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    padding: 16px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #000;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+  }
+
+  p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    padding: 14px;
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    font-weight: bold;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+
+  .link:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+
+  .footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="avatar">JS</div>
+  <h1>José Silva</h1>
+  <p>💻 Desenvolvedor | 🚀 Meus links e contatos</p>
+
+  <!-- 🔴 TROQUE O NÚMERO DO WHATSAPP AQUI -->
+  <a class="link" href="https://wa.me/5588996559062" target="_blank">💬 WhatsApp</a>
+
+  <a class="link" href="https://instagram.com" target="_blank">📸 Instagram</a>
+  <a class="link" href="https://github.com" target="_blank">🐙 GitHub</a>
+  <a class="link" href="https://youtube.com" target="_blank">▶️ YouTube</a>
+  <a class="link" href="#" target="_blank">🌐 Meu site</a>
+
+  <div class="footer">
+    © 2026 - Todos os direitos reservados
+  </div>
+</div>
+
+</body>
+</html>
