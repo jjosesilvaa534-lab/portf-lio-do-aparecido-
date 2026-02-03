@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>José Aparecido — Portfólio</title>
+  <meta name="description" content="Portfólio profissional de José Aparecido, Desenvolvedor Front-end."/>
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0b1220;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --primary: #3b82f6;
+      --border: #1f2933;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, Arial, sans-serif; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #3b82);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    body.light {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #2563eb;
+      --border: #e5e7eb;
+      background: linear-gradient(180deg, #f8fafc, #eef2ff);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      text-align: center;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid var(--primary);
+    }
+
+    .name { font-size: 22px; font-weight: 700; }
+    .role { color: var(--muted); font-size: 14px; }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #020617;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary);
+    }
+
+    /* Main */
+    main.section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    main h2 {
+      font-size: 18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      background: transparent;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .project {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+
+    .project:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .project h3 { font-size: 15px; }
+    .project p { font-size: 13px; color: var(--muted); }
+
+    /* Contato */
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+    }
+
+    .contact textarea { resize: vertical; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="card profile">
+      <img class="avatar" src="img.jpg" alt="Minha foto">
+
+      <div class="name">José Aparecido</div>
+      <div class="role">Desenvolvedor Front-end</div>
+
+      <div class="actions">
+        <a class="btn primary" href="jjosesilvaa321@gmail.com">Email</a>
+        <a class="btn primary" href="https://wa.me/5588996559062">whatsapp</a>
+        <a class="btn" href="https://github.com/aparecido776" target="_blank">GitHub</a>
+        <button class="btn" onclick="toggleTheme()">Tema</button>
+      </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="section">
+      <section class="card about">
+        <h2>Sobre</h2>
+        <p>
+          Sou desenvolvedor front-end focado em criar sites e aplicações web usando HTML, CSS e JavaScript.
+          Gosto de aprender, criar projetos práticos e evoluir sempre como programador.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Habilidades</h2>
+        <div class="skills">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsivo</span>
+          <span class="tag">Git/GitHub</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Projetos</h2>
+        <div class="projects">
+          <div class="project">
+            <h3>Portfólio Pessoal</h3>
+            <p>Site pessoal para apresentar meus projetos e contato.</p>
+            <a class="btn" href="#" target="_blank">Ver</a>
+          </div>
+
+          <div class="project">
+            <h3>Lista de Tarefas</h3>
+            <p>Aplicação simples para organizar tarefas do dia a dia.</p>
+            <a class="btn" href="#" target="_blank">Ver</a>
+          </div>
+
+          <div class="project">
+            <h3>Calculadora Web</h3>
+            <p>Calculadora feita com HTML, CSS e JavaScript.</p>
+            <a class="btn" href="#" target="_blank">Ver</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card contact">
+        <h2>Contato</h2>
+        <form id="contactForm">
+          <div style="display:grid; gap:10px;">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="email" id="email" placeholder="Seu email" required>
+            <textarea id="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
+            <button class="btn primary" type="submit">Enviar</button>
+            <p id="statusMsg" style="font-size:13px;"></p>
+          </div>
+        </form>
+      </section>
+
+      <footer>
+        © <span id="year"></span> — José Aparecido
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Ano automático
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Tema claro/escuro
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+      const isLight = document.body.classList.contains("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light");
+    }
+
+    // Formulário de contato (simulação)
+    const form = document.getElementById("contactForm");
+    const statusMsg = document.getElementById("statusMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      statusMsg.textContent = "✅ Mensagem enviada com sucesso!";
+      statusMsg.style.color = "lime";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
